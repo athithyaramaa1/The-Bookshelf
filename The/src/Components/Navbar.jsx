@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfo } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-
+import logo from '../assets/Kalvium-Logo-SVG.svg';
+// eslint-disable-next-line react/prop-types
 const Navbar = ({ handleChange }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -19,7 +20,7 @@ const Navbar = ({ handleChange }) => {
     <div>
       <div className="flexbox">
         <img
-          src="https://kalvium.com/wp-content/uploads/2023/04/Kalvium-Logo-SVG.svg"
+          src={logo}         
           alt=""
           className="logo"
         />
@@ -43,9 +44,7 @@ const Navbar = ({ handleChange }) => {
           <NavLink to="/register">
             <Button
               variant="contained"
-              startIcon={
-                <FontAwesomeIcon icon={faInfo} className="i-size" />
-              }
+              startIcon={<FontAwesomeIcon icon={faInfo} className="i-size" />}
               className="Register-btn"
             >
               Register

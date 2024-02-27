@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import axios from 'axios';
-import './BookShelf.css'
+import axios from "axios";
+import "./BookShelf.css";
 import Navbar from "./Navbar";
 
 const BookShelf = () => {
@@ -10,11 +10,14 @@ const BookShelf = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://reactnd-books-api.udacity.com/books", {
-          headers: { 'Authorization': 'whatever-you-want' }
-        });
+        const response = await axios.get(
+          "https://reactnd-books-api.udacity.com/books",
+          {
+            headers: { Authorization: "whatever-you-want" },
+          }
+        );
         setData(response.data.books);
-        console.log(response.data.books)
+        console.log(response.data.books);
         setFilter(response.data.books);
       } catch (error) {
         console.log(error.message);
@@ -22,7 +25,6 @@ const BookShelf = () => {
     };
 
     fetchData();
-    
   }, []);
 
   const handleChange = (searchTerm) => {
@@ -40,7 +42,7 @@ const BookShelf = () => {
         <div className="grid-container">
           {filter.map((ele) => (
             <div key={ele.id} className="individual-elements">
-              <img src={ele.imageLinks.thumbnail} alt="" className="books"/>
+              <img src={ele.imageLinks.thumbnail} alt="" className="books" />
               <h3>{ele.title}</h3>
             </div>
           ))}

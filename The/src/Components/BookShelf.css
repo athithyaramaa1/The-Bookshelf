@@ -49,35 +49,26 @@ body {
   scale: 1.02;
 }
 
-/* Mobile responsive */
 
 @media only screen and (max-width: 600px) and (min-width: 320px) {
-  body {
-    /* height: auto; Reset height for mobile */
-  }
-
   .grid-container {
-    grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
-    gap: 20px; /* Reduce the gap between elements for mobile */
-    margin-left: 2%; /* Adjust margin for better alignment on mobile */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    margin-left: 2%; 
   }
 
   .individual-elements {
-    width: 100%; /* Full width for mobile */
-    margin-bottom: 20px; /* Add some space between elements on mobile */
+    width: 100%; 
+    margin-bottom: 20px; 
   }
 
   .books {
-    width: 100%; /* Full width for mobile */
-    height: auto; /* Maintain aspect ratio for images on mobile */
+    width: 100%; 
+    height: auto; 
     border-radius: 10px;
   }
 
   .entire-container {
-    margin-top: 5%; /* Adjust margin for better alignment on mobile */
+    margin-top: 5%; 
   }
-}
-/* Tab responsive */
-
-@media only screen and (max-width: 920px) and (min-width: 700px) {
 }

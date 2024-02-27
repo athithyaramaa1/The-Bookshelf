@@ -15,20 +15,23 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
-
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      {"Copyright © "}
       <Link color="inherit" href="">
         Your Website
-      </Link>{' '}
+      </Link>{" "}
       {new Date().getFullYear()}
-      {'.'}
+      {"."}
     </Typography>
   );
 }
-
 
 const defaultTheme = createTheme();
 
@@ -113,8 +116,7 @@ export default function SignUp() {
 
     if (validateForm()) {
       nav("/");
-    } else {
-      console.log("Form is invalid. Please enter the required details as per required constraints");
+      console.log("Form Data:", formData);
     }
   };
 
@@ -276,9 +278,7 @@ export default function SignUp() {
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <NavLink to="/">
-                  <Link variant="body2">
-                    Already have an account? Sign in
-                  </Link>{" "}
+                  <Link variant="body2">Already have an account? Sign in</Link>{" "}
                 </NavLink>
               </Grid>
             </Grid>
