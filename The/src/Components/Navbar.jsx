@@ -9,13 +9,13 @@ import logo from '../assets/Kalvium-Logo-SVG.svg';
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ handleChange }) => {
   const [searchTerm, setSearchTerm] = useState("");
-
+// Searchbox functionality
   const Searchbox = (e) => {
     const value = e.target.value;
     setSearchTerm(value);
     handleChange(value);
   };
-
+// The navbar section
   return (
     <div>
       <div className="flexbox">

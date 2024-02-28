@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 const BookShelf = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState([]);
-
+// Fetching data from API
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,7 +26,7 @@ const BookShelf = () => {
 
     fetchData();
   }, []);
-
+// Giving the filter functionality
   const handleChange = (searchTerm) => {
     const filteredBooks = data.filter((book) =>
       book.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -34,7 +34,7 @@ const BookShelf = () => {
 
     setFilter(filteredBooks);
   };
-
+// Displaying the data 
   return (
     <>
       <Navbar handleChange={handleChange} />

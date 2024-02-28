@@ -14,7 +14,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-
+// React Forms
 function Copyright(props) {
   return (
     <Typography
@@ -34,7 +34,7 @@ function Copyright(props) {
 }
 
 const defaultTheme = createTheme();
-
+// Form Validation
 export default function SignUp() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -110,7 +110,7 @@ export default function SignUp() {
     setErrors(error);
     return isvalid;
   };
-
+// Submit event
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -126,7 +126,7 @@ export default function SignUp() {
       [e.target.name]: e.target.value,
     });
   };
-
+// Setting info in local storage
   useEffect(() => {
     const storedFormData = localStorage.getItem("formData");
     if (storedFormData) {
@@ -137,7 +137,7 @@ export default function SignUp() {
   useEffect(() => {
     localStorage.setItem("formData", JSON.stringify(formData));
   }, [formData]);
-
+// The UI
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">

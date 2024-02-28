@@ -4,6 +4,7 @@ import BookShelf from "../Components/BookShelf";
 import Register from "../Components/Register";
 
 const AllRoutes = () => {
+  // Routing done
   return (
     <Routes>
       <Route path="/register" element={<Register />} />
